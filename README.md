@@ -17,7 +17,7 @@
 # Menyiapkan project
 
 1. Setelah di-*clone*, masuk ke folder projectnya, kita install package-package yang ada di *pubspec.yaml* dengan mengetikkan perintah:
-   <br>
+   <br><br>
     ```bash
     flutter pub get
     ```
