@@ -1,16 +1,15 @@
-# coba_layouting
+# Tutorial <i>clone</i>
 
-A new Flutter project.
+1. Buka CMD, Git Bash, atau Windows Powershell, terus arahkan ke folder yang mau dipakai untuk naruh projectnya.
+  <br><br>
+  ![alt text](image.png)
 
-## Getting Started
+2. Kalo sudah ada di folder yang dituju, ketikkan perintah:
+    ```bash
+    git clone https://github.com/praktikumsisteminformasi/coba_layouting_flutter.git
+    ```
+    ![alt text](image-1.png)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. Nanti jadinya akan begini:
+    <br><br>
+    ![alt text](image-2.png)
