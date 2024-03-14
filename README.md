@@ -13,3 +13,10 @@
 3. Nanti jadinya akan begini:
     <br><br>
     ![alt text](image-2.png)
+
+# Menyiapkan project
+
+1. Setelah di-*clone*, masuk ke folder projectnya, kita install package-package yang ada di *pubspec.yaml* dengan mengetikkan perintah:
+    ```bash
+    flutter pub get
+    ```
