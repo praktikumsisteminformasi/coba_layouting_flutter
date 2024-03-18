@@ -15,7 +15,7 @@ class _InfoRidePageState extends State<InfoRidePage> {
       isLoading = true;
     });
 
-    // Fetch HTTP disini
+    // Fetch HTTP disini nanti
     await Future.delayed(const Duration(seconds: 3));
 
     setState(() {
