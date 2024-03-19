@@ -64,10 +64,12 @@ class _InfoRidePageState extends State<InfoRidePage> {
               ),
               child: Builder(
                 builder: (context) {
+                  // kalo lagi loading
                   if (isLoading) {
                     return const Text('Memesan...', style: TextStyle(color: Colors.white),);
                   }
 
+                  // kalo lagi ga loading
                   return const Row(
                     children: [
                       Icon(Icons.motorcycle, color: Colors.white, size: 28,), // Ini icon motor
