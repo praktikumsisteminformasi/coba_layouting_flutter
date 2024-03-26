@@ -15,12 +15,17 @@ class _InfoRidePageState extends State<InfoRidePage> {
       isLoading = true;
     });
 
+    // Fetch HTTP disini nanti
     await Future.delayed(const Duration(seconds: 3));
 
     setState(() {
       isLoading = false;
     });
   }
+
+  final formKey = GlobalKey<FormState>();
+  final pickUpPointTextController = TextEditingController();
+  final destinationAddressTextController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +36,15 @@ class _InfoRidePageState extends State<InfoRidePage> {
         backgroundColor: const Color(0xff4a8bc2),
       ),
       body: Form(
+        key: formKey,
         child: ListView(
           padding: const EdgeInsets.all(20),
           children: [
             // Titik jemput
             TextFormField(
+              controller: pickUpPointTextController,
               decoration: const InputDecoration(
-                label: Text('Titik jemput'),
+                label: Text('Titik jemput: Jl. Dari Sini No. 123'),
                 border: OutlineInputBorder()
               ),
             ),
@@ -46,14 +53,16 @@ class _InfoRidePageState extends State<InfoRidePage> {
 
             // Alamat tujuan
             TextFormField(
+              controller: destinationAddressTextController,
               decoration: const InputDecoration(
-                label: Text('Alamat tujuan'),
+                label: Text('Alamat tujuan: Jl. Kesini No. 321'),
                 border: OutlineInputBorder()
               ),
             ),
 
             const SizedBox(height: 20,),
 
+            // Pesan
             ElevatedButton(
               onPressed: isLoading ? null : orderInfoRide,
               style: ElevatedButton.styleFrom(

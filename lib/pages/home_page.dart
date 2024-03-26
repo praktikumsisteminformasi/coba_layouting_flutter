@@ -13,7 +13,6 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: const Color(0xff4a8bc2),
       ),
-
       // Ini Body, isi utama dari aplikasi kita
       // Kita pakai Widget 'ListView' agar halaman kita bisa di-scroll
       body: ListView(
@@ -44,10 +43,10 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-
+          
           // Kasih space kosong pakai Widget 'SizedBox'
           const SizedBox(height: 20,),
-
+          
           // Tombol-tombol layanan
           // karena tombol-tombol nya disusun secara horizontal, maka kita pakai Widget 'Row'
           Row(
@@ -84,10 +83,10 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-
+          
           // Kasih space kosong pakai Widget 'SizedBox'
           const SizedBox(height: 20,),
-
+          
           // Tempat, Makanan, dan Barang terbaik
           // Karena card-card nya disusun secara vertikal, maka kita pakai Widget 'Column'
           const Column(
@@ -110,7 +109,6 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-
               // Makanan paling banyak dipesan
               Card(
                 child: Padding(
@@ -128,7 +126,6 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-
               // Barang paling banyak dikirim
               Card(
                 child: Padding(

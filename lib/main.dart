@@ -19,7 +19,6 @@ class AplikasiSaya extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(), // Kita set font aplikasi kita pakai font 'Poppins' dari package GoogleFonts
       ),
-
       routes: {
         '/': (context) => const HomePage(),
         '/info-ride': (context) => const InfoRidePage()
