@@ -67,29 +67,35 @@ class _InfoRidePageState extends State<InfoRidePage> {
               onPressed: isLoading ? null : orderInfoRide,
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.greenAccent,
-                padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30)
+                padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+                disabledBackgroundColor: Colors.lightGreenAccent
               ),
               child: Builder(
                 builder: (context) {
-                  // kalo lagi loading
                   if (isLoading) {
-                    return const Text('Memesan...', style: TextStyle(color: Colors.white),);
+                    return const SizedBox(
+                      width: 30,
+                      height: 30,
+                      child: CircularProgressIndicator(
+                        color: Colors.white,
+                      ),
+                    );
                   }
-
-                  // kalo lagi ga loading
+                  
                   return const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(Icons.motorcycle, color: Colors.white, size: 28,), // Ini icon motor
+                      Icon(Icons.motorcycle, color: Colors.white, size: 28,),
                       SizedBox(width: 20,),
                       Text('Pesan sekarang', style: TextStyle(color: Colors.white),)
                     ],
                   );
                 }
-              )
+              ),
             )
           ],
-        ),
-      )
+        )
+      ),
     );
   }
 }

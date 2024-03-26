@@ -21,7 +21,7 @@ class AplikasiSaya extends StatelessWidget {
       ),
       routes: {
         '/': (context) => const HomePage(),
-        '/info_ride': (context) => const InfoRidePage()
+        '/info-ride': (context) => const InfoRidePage()
       },
     );
   }

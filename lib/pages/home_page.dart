@@ -5,12 +5,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // 'Scaffold' adalah Widget untuk membuat struktur aplikasi yang terdiri dari App Bar, Body, dan Bottom Navigation Bar
     return Scaffold(
+      // Ini App Bar, diisi menggunakan Widget 'AppBar'
       appBar: AppBar(
         title: const Text('INFORJEK', style: TextStyle(color: Colors.white),),
         centerTitle: true,
         backgroundColor: const Color(0xff4a8bc2),
       ),
+      // Ini Body, isi utama dari aplikasi kita
+      // Kita pakai Widget 'ListView' agar halaman kita bisa di-scroll
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: [
@@ -39,10 +43,10 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
-      
+          
           // Kasih space kosong pakai Widget 'SizedBox'
           const SizedBox(height: 20,),
-      
+          
           // Tombol-tombol layanan
           // karena tombol-tombol nya disusun secara horizontal, maka kita pakai Widget 'Row'
           Row(
@@ -50,7 +54,9 @@ class HomePage extends StatelessWidget {
             children: [
               // Tombol layanan 'Info Ride'
               ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/info_ride'),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/info-ride');
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.green,
                   foregroundColor: Colors.white
@@ -77,10 +83,10 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-      
+          
           // Kasih space kosong pakai Widget 'SizedBox'
           const SizedBox(height: 20,),
-      
+          
           // Tempat, Makanan, dan Barang terbaik
           // Karena card-card nya disusun secara vertikal, maka kita pakai Widget 'Column'
           const Column(
@@ -103,7 +109,6 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-      
               // Makanan paling banyak dipesan
               Card(
                 child: Padding(
@@ -121,7 +126,6 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
               ),
-      
               // Barang paling banyak dikirim
               Card(
                 child: Padding(
@@ -142,7 +146,7 @@ class HomePage extends StatelessWidget {
             ],
           )
         ],
-      ),
+      )
     );
   }
 }
